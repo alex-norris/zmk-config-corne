@@ -5,11 +5,10 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&mt {
-    tapping-term-ms = <400>;
-};
+&mt { tapping-term-ms = <400>; };
 
 / {
     keymap {
@@ -65,10 +64,10 @@
 
         arrows {
             bindings = <
-&sys_reset  &trans           &trans    &trans     &trans     &kp UNDER    &trans  &kp PG_UP  &kp UP    &kp HOME   &trans  &trans
-&trans      &kp LGUI         &kp LALT  &kp LCTRL  &kp LSHFT  &trans       &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
-&trans      &kp PAUSE_BREAK  &trans    &kp INS    &trans     &trans       &trans  &kp PG_DN  &trans    &kp END    &trans  &trans
-                                       &trans     &to 0      &trans       &trans  &trans     &to 0
+&sys_reset  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL  &kp UNDER    &trans  &kp PG_UP  &kp UP    &kp HOME   &trans  &trans
+&trans      &kp LGUI         &kp LALT      &kp LCTRL     &kp LSHFT       &trans       &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans
+&trans      &kp PAUSE_BREAK  &trans        &kp INS       &trans          &trans       &trans  &kp PG_DN  &trans    &kp END    &trans  &trans
+                                           &trans        &to 0           &trans       &trans  &trans     &to 0
             >;
         };
     };
